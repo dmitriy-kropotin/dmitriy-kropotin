@@ -2,20 +2,20 @@
 1. подключил репозиторий dev oracle: 
 	>sudo dnf config-manager --add-repo 'https://yum.oracle.com/repo/OracleLinux/OL8/developer/x86_64/'
 3. Установка VirtualBox: 
-4. 	>sudo dnf update, sudo dnf install VirtualBox-6.1
+ 	>sudo dnf update, sudo dnf install VirtualBox-6.1
 6. подключил репозиторий vagrant: 
-9.	 >sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+	 >sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 11. установил packer: 
-12. 	 >sudo dnf install packer
+	 >sudo dnf install packer
 14. установка приложения git: 
 16. клонирование репозитория на рабочую машину: 
 17. сгенерировал ssh-key для подключения к github через ssh: 
 18. добавил публичную часть ключа в настройки профиля github: 
-19. 	>cat /home/tesla/.ssh/id_ed25519.pub
+	>cat /home/tesla/.ssh/id_ed25519.pub
 21. попытался запустить виртуальную машину командой 
-22. 	>vagrant up
+	>vagrant up
 23. получил ошибку 
-24. 	>No usable default provider could be found for your system.... 
+ 	>No usable default provider could be found for your system.... 
 25. погуглил, не сконфигурировал virtualbox. необходимо подключить модуль ядра. 
 26. подключаю репозиторий 
 27. 	>sudo dnf config-manager --add-repo 'https://yum.oracle.com/repo/OracleLinux/OL8/developer/EPEL/x86_64/'
