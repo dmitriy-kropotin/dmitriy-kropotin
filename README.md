@@ -1,12 +1,9 @@
 0. спросил у коллеги про пакет менеджер в ol8.5. Оказалось вместо yum, используется dnf.
 1. подключил репозиторий dev oracle: 
 	>sudo dnf config-manager --add-repo 'https://yum.oracle.com/repo/OracleLinux/OL8/developer/x86_64/'
-	
 3. Установка VirtualBox: 
-4. 
-5. 	>sudo dnf update, sudo dnf install VirtualBox-6.1
-6. 
-7. подключил репозиторий vagrant: 
+4. 	>sudo dnf update, sudo dnf install VirtualBox-6.1
+6. подключил репозиторий vagrant: 
 8. 
 9.	 >sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 10. 
