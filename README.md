@@ -5,56 +5,62 @@
  	>sudo dnf update
  	>
  	>sudo dnf install VirtualBox-6.1
- 
-. подключил репозиторий vagrant: 
+3. подключил репозиторий vagrant: 
 	 >sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-. установил packer: 
+4. установил packer: 
 	 >sudo dnf install packer
-. установка приложения git: 
-. клонирование репозитория на рабочую машину: 
-. сгенерировал ssh-key для подключения к github через ssh: 
-. добавил публичную часть ключа в настройки профиля github: 
+5. установка приложения git: 
+ 	>sudo dnf install git-all
+6. сгенерировал ssh-key для подключения к github через ssh:
+	>ssh-keygen -t ed25519 -C "dmitriy.kropotin@realize.dev"
+7. вывод публичного ключа для профиля в github: 
 	>cat /home/tesla/.ssh/id_ed25519.pub
-. попытался запустить виртуальную машину командой 
+8. клонирования репозитория из github:
+	>git clone git@github.com:dmitriy-kropotin/manual_kernel_update.gi
+9. попытался запустить виртуальную машину командой 
 	>vagrant up
-. получил ошибку 
+10. получил ошибку 
  	>No usable default provider could be found for your system.... 
-. погуглил, не сконфигурировал virtualbox. необходимо подключить модуль ядра. 
-. подключаю репозиторий 
+11. погуглил, не сконфигурировал virtualbox. необходимо подключить модуль ядра. 
+12. для этого подключаю репозиторий epel: 
  	>sudo dnf config-manager --add-repo 'https://yum.oracle.com/repo/OracleLinux/OL8/developer/EPEL/x86_64/'
-. для конфигурирования virtualbox устанавливаю доп. компоненты: 
+13. устанавливаю модули ядра и доп. по : 
 	>sudo dnf install kernel-devel gcc make perl bzip2 dkms. 
-. конфигурирования virtualbox: 
+14. конфигурирования virtualbox: 
 	>sudo /sbin/vboxconfig
-. попытка запуска вирутальнйо машины: 
+15. попытка запуска вирутальнйо машины: 
 	>vagrant up. 
 Ура, успех
-. подключаюсь по к вирутальной машине: 
+16. подключаюсь по к вирутальной машине: 
 	>vagrant ssh
-. проверяю версию ядра: 
+17. проверяю версию ядра: 
 	>uname -r. 
 	>3.10.0-1127.el7.x86_64
-. подключаю репозиторий ELREPO: 
+18. подключаю репозиторий ELREPO: 
 	>sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 	>sudo yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
-. обновляю ядро на виртуальной машине: 
+19. обновляю ядро на виртуальной машине: 
 	>sudo yum --enablerepo elrepo-kernel install kernel-ml -y
-. обновляю конфу grub: 
+20. обновляю конфу grub: 
 	>sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 	>sudo grub2-set-default 0
-. перезагрузка виртуальной машины 
+21. перезагрузка виртуальной машины 
 	>sudo reboot
-. проверяю версию ядра 
+22. проверяю версию ядра 
 	>uname -r
 	> 5.16.4-1.el7.elrepo.x86_64
-. узнаю версию centos 
+23. узнаю версию centos 
 	>cat /etc/centos-release
 	>CentOS Linux release 7.9.2009 (Core)
-. изучаю centos.json, редактирую версию CentOS: 
+24. изучаю centos.json, редактирую версию CentOS: 
 	>"artifact_version" : "7.9.2009"
 	>"image_name": "centos-7.9"
-40. запускаю packer: packer build centos.json. не удачно, в конфигурации есть Deprecated configuration key: 'iso_checksum_type'. Убираю
-41. запускаю packer: packer build centos.json. опять не удачно. 
+25. запускаю packer: 
+	>packer build centos.json
+не удачно, в конфигурации есть 
+	>Deprecated configuration key: 'iso_checksum_type'
+убираю этот параметр.
+26. запускаю packer: packer build centos.json. опять не удачно. 
 	==> centos-7.9: Error starting VM: VBoxManage error: VBoxManage: error: The virtua
 	l machine 'packer-centos-vm' has terminated unexpectedly during startup because of signal 6
 	==> centos-7.9: VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
