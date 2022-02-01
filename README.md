@@ -3,6 +3,7 @@
 	>sudo dnf config-manager --add-repo 'https://yum.oracle.com/repo/OracleLinux/OL8/developer/x86_64/'
 2. Установка VirtualBox: 
  	>sudo dnf update
+ 	>
  	>sudo dnf install VirtualBox-6.1
  	
 . подключил репозиторий vagrant: 
