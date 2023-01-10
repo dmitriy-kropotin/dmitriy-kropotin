@@ -1,1 +1,31 @@
-<mxfile host="app.diagrams.net" modified="2023-01-10T11:24:22.649Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.8.3" etag="CuRIZaoz2S3KSBHcufxj" type="github"><diagram id="hyiAmRsg3BeNBAE-Es7u">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-01-10T11:36:21.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.8.3" etag="BzVbdPEflHFlfgskePwT" type="github">
+  <diagram id="CEQLPe00zyiSV2kJ4wZ2" name="Страница 1">
+    <mxGraphModel dx="1434" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1XkGTfggDqS5s6uX_i7-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="62.5" width="300" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="c1XkGTfggDqS5s6uX_i7-2" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="60" width="296" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="c1XkGTfggDqS5s6uX_i7-3" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="360" width="270" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c1XkGTfggDqS5s6uX_i7-4" value="КнВ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="100" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c1XkGTfggDqS5s6uX_i7-5" value="МСК" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="543" y="90" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c1XkGTfggDqS5s6uX_i7-6" value="ТрИ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="440" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c1XkGTfggDqS5s6uX_i7-7" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_SQL_Server_Stretch_Databases.svg;" vertex="1" parent="1">
+          <mxGeometry x="356" y="270" width="64" height="65" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
